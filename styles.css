@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
 
 /* The body class targets the <body> tag in your html file */
 body {
-    background-color: rgb(227, 219, 216);
-    font-family: "Karla", sans-serif;
+    background-color: rgb(255, 217, 247);
+    font-family: 'Karla', sans-serif;
     margin: 0;
 }
 
-/* The following classes are used to style the corresponding html classes */
+/* Menu bar styling */
 .menu {
-    padding: 40px;
-    background-color: #000000;
+    padding: 30px;
+    background-color: #ff7ebc;
     color: #ffffff;
     font-size: 16px;
     position: sticky;
@@ -24,6 +24,79 @@ body {
     color: #ffffff;
 }
 
+.menu-item:hover {
+    background-color: #ff99c5;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+/* Center intro text */
+.begin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    text-align: center;
+}
+
+.begin h1, .begin p {
+    margin: 0;
+}
+
+/* Space between text and paragraph */
+.begin p {
+    margin-top: 10px;
+}
+
+/* Content Section */
 .content {
     padding: 40px;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+/* About Me Container */
+.about-me-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Image Styling */
+.content img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* About Me Section - Wider Style */
+.about-me {
+    width: 70%; /* Make it take more space */
+    max-width: 1000px; /* Ensures it doesn't get too wide */
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Make it look nice on mobile devices */
+@media (max-width: 768px) {
+    .about-me-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-me {
+        width: 90%; /* Make it fit better on smaller screens */
+    }
+
+    .content img {
+        margin-bottom: 20px;
+    }
 }
